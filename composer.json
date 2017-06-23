@@ -1,8 +1,23 @@
 {
+    "name": "livecn/slim-plates",
+    "description": "Custom Slim Framework view for the Plates template system",
+    "keywords": [
+        "slim",
+        "plates",
+        "templating"
+    ],
+    "homepage": "https://github.com/livecn/slim-plates",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cloud Lu",
+            "email": "livecn@163.com",
+        }
+    ],
     "require": {
         "php": ">=5.5.0" 
     },
-    "minimum-stability":"dev",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Cloud\\Slim\\View\\": "src/"
