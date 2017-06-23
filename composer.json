@@ -1,0 +1,11 @@
+{
+    "require": {
+        "php": ">=5.5.0" 
+    },
+    "minimum-stability":"dev",
+    "autoload": {
+        "psr-4": {
+            "Cloud\\Slim\\View\\": "src/"
+        }
+    }
+}
