@@ -15,9 +15,17 @@ class Plates {
     }
 
     public function __call($method_name, $arguments) {
-        if (method_exists($this->engine, $method_name)) {
+        if (is_callable(array($this->engine, $method_name))) {
             return call_user_func_array(array($this->engine, $method_name), $arguments);
         }
+    }
+
+    public function loadAssetExtension($path) {
+        return $this->engine->loadExtension(new \League\Plates\Extension\Asset($path, true));
+    }
+
+    public function loadUriExtension($uri) {
+        return $this->engine->loadExtension(new \League\Plates\Extension\URI($uri));
     }
 
 }
